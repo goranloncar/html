@@ -16,10 +16,8 @@
 
 body {
   font-family: "Roboto Light", sans-serif;
-  color: c.$body-color;
 }
 h1 {
-  color: c.$primary-color;
   font-family: "Roboto", serif;
 }
 
@@ -84,4 +82,169 @@ p {
 //    background-color: red;
 //  }
 //}
+
+h1{
+  color: #000;
+}
+
+li{
+  display: inline-block;
+  padding-left: 8px;
+}
+
+header li:hover{
+  background-color: #b7b7bb;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+nav{
+  position: absolute;
+  right: 25px;
+  top: 8px;
+}
+h3{
+  color: #b8b8bf;
+  font-size: 17px;
+  padding-left: 40px;
+}
+h2{
+  font-size: 35px;
+  padding-left: 40px;
+}
+header img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.prva_sekcija p{
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 22px;
+}
+
+.row_one{
+  text-align: center;
+}
+
+.row_one img{
+  width: 468px;
+  height: 336px;
+}
+
+.row_one .sekcija_jedan{
+  display: inline-block;
+  justify-content: center;
+  width: 600px;
+  padding-right: 200px;
+}
+
+.row_one .sekcija_dva{
+  display: inline-block;
+  width: 600px;
+}
+
+.row_two{
+  text-align: center;
+}
+
+.row_two img{
+  width: 468px;
+  height: 336px;
+}
+
+.row_two .sekcija_tri{
+  display: inline-block;
+  justify-content: center;
+  width: 600px;
+  padding-right: 200px;
+}
+
+.row_two .sekcija_cetiri{
+  display: inline-block;
+  width: 600px;
+}
+
+.forma {
+  display: block;
+  text-align: center;
+  background-color: #b6b8b6;
+  margin: 0;
+  padding: 60px;
+}
+
+.forma form{
+  display: inline-block;
+}
+
+.forma button img{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
+
+.second_section{
+  text-align: center;
+}
+
+.second_section .picture_five{
+  display: inline-block;
+  justify-content: center;
+  width: 600px;
+  padding-right: 200px;
+}
+
+
+.second_section .picture_six{
+  display: inline-block;
+  width: 600px;
+}
+
+.button{
+  display: block;
+  text-align: center;
+}
+
+.button button{
+  margin-top: 200px;
+  height: 90px;
+  width: 200px;
+  font-size: 25px;
+  background-color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  color: #6f6f72;
+  border:solid 1px #6f6f72;
+}
+
+.button button:hover{
+  background-color: #b7b7bb;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+
+footer {
+  display: block;
+  margin-top: 80px;
+  padding-top: 20px;
+  background-color: #e8e8e8;
+  padding-bottom: 20px;
+}
+
+footer ul{
+  display: inline-block;
+}
+
+footer .second_list img{
+  height: 20px;
+  width: 20px;
+}
+
+footer .second_list{
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+}
+
 
