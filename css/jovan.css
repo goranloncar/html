@@ -40,10 +40,6 @@ header img{
   font-size: 22px;
 }
 
-
-
-
-
 .row_one{
   text-align: center;
 }
@@ -58,8 +54,6 @@ header img{
   justify-content: center;
   width: 600px;
   padding-right: 200px;
-  
-
 }
 
 .row_one .sekcija_dva{
@@ -82,7 +76,6 @@ header img{
   width: 600px;
   padding-right: 200px;
 }
-
 
 .row_two .sekcija_cetiri{
   display: inline-block;
@@ -146,7 +139,6 @@ header img{
   transition: all 0.8s;
 }
 
-
 footer {
   display: block;
   margin-top: 80px;
@@ -168,5 +160,4 @@ footer .second_list{
   display: inline-block;
   position: absolute;
   right: 25px;
-
 }
