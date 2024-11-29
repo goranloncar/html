@@ -1,250 +1,512 @@
 @use "reset";
 @use "colors" as c;
 @use "media-queries" as mq;
+@import "colors";
+@import "navbar";
 @import 'https://fonts.googleapis.com/css?family=Raleway:100,300,400|Roboto+Condensed:300,700&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Ponnala&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+  font-family: 'Roboto', sans-serif;
+  body{
+    p{
+    line-height: 1.2;
+    font-size: 16px;
+    color: $body-color;
+    }
+  }
+}
 
 
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  background-color: #aaa8a8;
+  height: 80px;
 
+}
 
-@mixin important-text {
-  color: red;
+.logo{
+  align-content: center;
   font-size: 25px;
-  font-weight: bold;
-  border: 1px solid blue;
+  margin-left: 15px;
 }
 
-body {
-  font-family: "Roboto Light", sans-serif;
-}
-h1 {
-  font-family: "Roboto", serif;
-}
-
-p {
-  font-family: "Parkinsans", sans-serif;
-}
-
-.important {
-  @include important-text;
-}
-
-.button-basic  {
-  border: none;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.button-report  {
-  @extend .button-basic;
-  background-color: red;
-}
-
-.button-submit  {
-  @extend .button-basic;
-  background-color: green;
-  color: white;
-}
-
-@keyframes example {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
-
-.div {
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: width 2s;
-  animation-name: example;
-  animation-duration: 4s;
-}
-
-.div:hover {
-  width: 300px;
-}
-
-//body {
-//  background-color: green;
-//}
-//
-
-//@include mq.tablet {
-//  body {
-//    background-color: yellow;
-//  }
-//}
-//
-//@include mq.desktop {
-//  body {
-//    background-color: red;
-//  }
-//}
-
-h1{
+.nav-bars{
+  align-content: center;
   color: #000;
-}
-
-li{
-  display: inline-block;
-  padding-left: 8px;
-}
-
-header li:hover{
-  background-color: #b7b7bb;
-  cursor: pointer;
-  transition: all 0.8s;
-}
-
-nav{
-  position: absolute;
-  right: 25px;
-  top: 8px;
-}
-h3{
-  color: #b8b8bf;
-  font-size: 17px;
-  padding-left: 40px;
-}
-h2{
-  font-size: 35px;
-  padding-left: 40px;
-}
-header img{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
+  padding: 0 10px 0 0;
 }
 
-.prva_sekcija p{
-  padding-left: 40px;
-  padding-right: 40px;
-  font-size: 22px;
+.menu{
+  align-content: center;
+  display: none;
+  list-style-type: none;
 }
 
-.row_one{
-  text-align: center;
+.menu li:hover{
+  color: #af1717;
+  transition: all 0.2s;
 }
 
-.row_one img{
-  width: 468px;
-  height: 336px;
+header{
+  img{
+    height: 268px;
+    width: 100%;
+  }
 }
 
-.row_one .sekcija_jedan{
-  display: inline-block;
+.prva-sekcija{
+  h3{
+    color: $h3-color;
+    text-align: start;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  h2{
+    color: $h2-color;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  p{
+    line-height: 1.2;
+    font-size: 16px;
+    color: $body-color;
+  }
+}
+.row-one{
+  display: flex;
   justify-content: center;
-  width: 600px;
-  padding-right: 200px;
+  flex-direction: column;
+  h3{
+    color: $h3-color;
+    text-align: start;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  h2{
+    color: $h2-color;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  img{
+    height: 268px;
+    width: 100%;
+  }
 }
-
-.row_one .sekcija_dva{
-  display: inline-block;
-  width: 600px;
+.row-two{
+  color: $body-color;
+  line-height: 1.2;
+  font-size: 16px;
+  h3{
+    color: $h3-color;
+    text-align: start;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  h2{
+    color: $h2-color;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  img{
+    height: 268px;
+    width: 100%;
+  }
 }
-
-.row_two{
-  text-align: center;
+.forma{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #cecbcb;
+  padding: 15px 0;
+  h2{
+    color: $h2-color;
+    text-align: center;
+  }
+  .email-forma{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    button{
+      height: 22px;
+      width: 27px;
+      img{
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
 }
-
-.row_two img{
-  width: 468px;
-  height: 336px;
-}
-
-.row_two .sekcija_tri{
-  display: inline-block;
+.second-section{
+  display: flex;
   justify-content: center;
-  width: 600px;
-  padding-right: 200px;
+  flex-direction: column;
+  padding: 15px 0 25px 0;
+  h3{
+    text-align: start;
+    color: $h3-color;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+  h2{
+    text-align: center;
+    color: $h2-color;
+  }
+  img{
+    height: 268px;
+    width: 100%;
+  }
 }
-
-.row_two .sekcija_cetiri{
-  display: inline-block;
-  width: 600px;
-}
-
-.forma {
-  display: block;
-  text-align: center;
-  background-color: #b6b8b6;
-  margin: 0;
-  padding: 60px;
-}
-
-.forma form{
-  display: inline-block;
-}
-
-.forma button img{
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-}
-
-.second_section{
-  text-align: center;
-}
-
-.second_section .picture_five{
-  display: inline-block;
-  justify-content: center;
-  width: 600px;
-  padding-right: 200px;
-}
-
-
-.second_section .picture_six{
-  display: inline-block;
-  width: 600px;
-}
-
 .button{
-  display: block;
+  padding: 15px 32px;
   text-align: center;
-}
-
-.button button{
-  margin-top: 200px;
-  height: 90px;
-  width: 200px;
-  font-size: 25px;
-  background-color: #fff;
-  font-family: 'Times New Roman', Times, serif;
-  color: #6f6f72;
-  border:solid 1px #6f6f72;
-}
-
-.button button:hover{
-  background-color: #b7b7bb;
-  cursor: pointer;
-  transition: all 0.8s;
-}
-
-footer {
+  text-decoration: none;
   display: block;
-  margin-top: 80px;
+  margin: 4px 2px;
+  a{
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  display: inline-block;
+  padding:  20px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.8s;
+  }
+}
+a:hover{
+  background-color: #b1aeae;
+}
+footer{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
   padding-top: 20px;
-  background-color: #e8e8e8;
-  padding-bottom: 20px;
+  background-color: #e7e7e7;
+  .first-list{
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    list-style: none;
+    li{
+      padding: 0 10px;
+    }
+  }
+  .second-list{
+    font-size: 9px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 10px 30px;
+    list-style: none;
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
-footer ul{
-  display: inline-block;
+@include mq.desktop{
+  body{
+    p{
+      line-height: 1.2;
+      font-size: 16px;
+      color: $body-color;
+    }   
+  }
+  .nav-bar{
+    height: 120px;
+    .logo{
+      font-size: 50px;
+    }
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 25px;
+    li{
+      display: inline-block;
+      padding: 0 20px;
+    } 
+  }
+  .nav-bars{
+    display: none;
+  }
+  header{
+    display: flex;
+    justify-content: center;
+    padding: 50px 300px;
+    height: auto;
+    img{
+      width: 1303px;
+      height: 699px;
+    }
+  }
+  .prva-sekcija{
+    h2{
+      text-align: start;
+      padding: 15px 50px;
+    }
+    h3{
+      padding: 20px 50px;
+    }
+    p{
+      padding: 0 50px;
+      font-size: 23px;
+    }
+  }
+  .row-one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .sekcija-jedan{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    .sekcija-dva{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    img{
+      max-width: 500px;
+      padding: 30px 100px;
+      height: 392px;
+    }
+  }
+  .row-two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .sekcija-tri{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    .sekcija-cetiri{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    img{
+      max-width: 500px;
+      padding: 30px 100px;
+      height: 392px;
+    }
+  }
+  .forma{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: #cecbcb;
+    padding: 50px 0;
+    margin: 50px 0;
+    h2{
+      font-size: 25px;
+      color:$h2-color;
+    }
+    .email-forma{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      button{
+        display: inline-block;
+        height: 23px;
+        width: 33px;
+        img{
+          height: 18px;
+          width: 20px;
+        }
+      }
+    }
+  }
+  .second-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .picture-five{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    .picture-six{
+      h2{
+        text-align: start;
+        padding: 15px 50px;
+      }
+      h3{
+        padding: 20px 50px;
+      }
+      p{
+        max-width: 45%;
+        padding: 0 50px;
+        font-size: 23px;
+      }
+    }
+    img{
+      max-width: 500px;
+      padding: 30px 100px;
+      height: 392px;
+    }
+  }
+  .button{
+    padding: 40px 40px;
+    transition: all 1s;
+    margin: 40px;
+  }
+  footer{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    color: $body-color;
+    background-color: #e7e7e7;
+    padding: 30px 0 10px 0;
+    .first-list{
+      font-size: 15px;
+      li{
+        transition: all 0.5s ;
+      }
+      li:hover{
+        color: #000;
+      }
+    }
+    .second-list{
+      font-size: 15px;
+      li{
+        padding: 0 15px 0 15px;
+        transition: all 0.5s ;
+      }
+      li:hover{
+        color: #000;
+      }
+    }
+  }
 }
-
-footer .second_list img{
-  height: 20px;
-  width: 20px;
+@include mq.tablet{
+  .nav-bars{
+    display: none;
+  }
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+      padding-right: 20px;
+    }
+  }
+  header{
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    img{
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  }
+  .prva-sekcija{
+    p{
+      padding: 0 20px;
+    }
+  }
+  .row-one{
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    img{
+      width: 100%;
+      height: 515px;
+      text-align: center;
+    }
+  }
+  .row-two{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    .sekcija-tri{
+      margin: 0 0 100px 0;
+      img{
+        height: 515px;
+        width: 100%;
+      }
+    }
+    .sekcija-cetiri{
+      img{
+        height: 515px;
+        width: 100%;
+      }
+    }
+  }
+  .second-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    img{
+      height: 515px;
+      width: 100%;
+    }
+  }
+  footer{
+    ul{
+      li{
+        font-size: 17px;
+      }
+    }
+  }
 }
-
-footer .second_list{
-  display: inline-block;
-  position: absolute;
-  right: 25px;
-}
-
-
